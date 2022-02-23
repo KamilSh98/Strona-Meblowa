@@ -1,0 +1,582 @@
+@import mixins
+body
+    margin: 0
+    box-sizing: border-box
+    padding: 0
+    list-style-type: none
+    text-decoration: none
+    background: #d4cab1
+nav
+    height: 1
+    background-color: #d4cab1
+    width: 100vw
+    .top-nav
+        display: flex
+        justify-content: space-between
+        position: relative
+        form
+            margin-left: 1%
+            transform: translate(0, 70%)
+            input
+                border: none
+                border-bottom: 1px solid #1A000C
+                background-color: #d4cab1
+            button.search
+                border: none
+                background-color: #d4cab1
+                color: #1A000C
+                font-size: 1.3rem
+                cursor: pointer
+        h1
+            font-family: 'Comforter', cursive
+            letter-spacing: 5px
+            position: absolute
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 2rem
+            color: #1A000C
+            text-shadow: 0px 0px 5px rgba(60, 32, 11, 1)
+        .nav-right-menu
+            transform: translate(-40%, 90%)
+            a
+                color: #1A000C
+                margin-right: 10px
+                i
+                    font-size: 1.3rem
+    hr
+        border-color: #1A000C
+        width: 70vw
+        margin: auto
+        margin-top: 30px
+
+    .bottom-nav
+        width: 100vw
+        background: #d4cab1
+        height: 50px
+        .wrapper
+            position: relative
+            width: 100vw
+            margin: auto
+            display: flex
+            align-items: center
+            justify-content: space-around
+            margin: 0 auto
+            .nav-links
+                display: inline-flex
+                li
+                    list-style: none
+                    a
+                        color: #1A000C
+                        text-decoration: none
+                        font-size: 18px
+                        font-weight: 500
+                        padding: 9px 15px
+                        border-top-right-radius: 5px
+                        border-top-left-radius: 5px
+                        transition: all 0.3s ease
+                    a:hover
+                        background: #c3b9a0
+                        color: #392228
+                li:hover
+                    .mega-box
+                        transition: all 0.3s ease
+                        top: 45px
+                        opacity: 1
+                        visibility: visible
+                .moblie-item
+                    display: none
+                .mega-box
+                    position: absolute
+                    left: calc(10% - 30px)
+                    width: 80vw
+                    top: 85px
+                    opacity: 0
+                    visibility: hidden
+                    z-index: 2
+                    .content
+                        background: #c3b9a0
+                        padding: 10px 0px
+                        display: flex
+                        width: 100%
+                        justify-content: space-between
+                        box-shadow: 0 6px 10px rgba(0,0,0,0.15)
+                        .row
+                            width: calc(25% - 30px)
+                            line-height: 45px
+                            img
+                                width: 100%
+                                height: 100%
+                                object-fit: cover
+                                margin-left: 10px
+                            header
+                                color: #1A000C
+                                font-size: 20px
+                                font-weight: 500
+                                text-align: center
+                            .mega-links
+                                border-left: 1px solid #1A000C
+                                li
+                                    text-align: left
+                                    a
+                                        padding: 0px
+                                        color: #1A000C
+                                        font-size: 17px
+                                        display: block
+                                        text-align: left
+                                    a:hover
+                                        color: #1A000C
+                                        border-bottom: 1px solid #1A000C
+header
+    .header
+        position: relative
+        .header-text
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            text-align: center
+            button.more
+                background-color: #d4cab1
+                border: 2px solid #1A000C
+                padding: 10px 20px
+                border-radius: 20px
+                cursor: pointer
+                opacity: 0.7
+                a
+                    text-decoration: none
+                    color: #1A000C
+                    font-weight: bold
+            button.more:hover
+                background-color: #c3b9a0
+                opacity: 1
+            .box
+                border: 1px solid #1A000C
+                background-color: #d4cab1
+                padding: 0px 15px
+                margin-bottom: 15px
+                border-radius: 20px
+                opacity: 0.7
+                h2
+                    font-size: 2.5rem
+                    color: #1A000C
+                h3
+                    font-size: 2rem
+                    color:#1A000C
+            .box:hover
+                opacity: 0.9
+
+.advantages
+    display: flex
+    width: 100%
+    .item
+            min-width: 21vw
+            height: 250px
+            text-align: center
+            background-color: #d4cab1
+            margin-right: 2px
+            scrollbar-width: none
+            -ms-overflow-style: none
+            color: #1A000C
+            #circle-text
+                position: relative
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.20)
+                padding: 30px
+                border-radius: 100%
+                animation: spin 5s linear infinite
+                font-size: 2rem
+                margin-left: 20%
+
+                span
+                    position: absolute
+                    top: 115px
+                    left: 125px
+    .careabout
+        height: 270px
+        display: flex
+        overflow-x: auto
+        overflow-y: hidden
+        .item
+            min-width: 25vw
+            height: 250px
+            text-align: center
+            background-color: #d4cab1
+            margin-right: 2px
+            scrollbar-width: none
+            -ms-overflow-style: none
+            color: #1A000C
+            padding: 10px
+            border-right: 7px dotted #392228
+            p
+                width: 80%
+                text-align: center
+                margin: 0 auto
+            h5
+                font-size: 1rem
+                width: 80%
+                margin: 2% auto
+            i
+                font-size: 7rem
+
+.careabout::-webkit-scrollbar
+    width: 12px
+.careabout::-webkit-scrollbar-thumb
+    background: linear-gradient(90deg, rgba(212,202,177,1) 0%, rgba(60,32,11,1) 100%)
+    border-radius: 6px
+.careabout::-webkit-scrollbar-thumb:hover
+    background: linear-gradient(90deg, rgba(212,202,177,1) 0%, rgba(60,32,11,1) 100%)  
+
+
+.new
+    width: 80vw
+    margin: 0 auto
+    h3.new-header
+        text-align: center
+        text-transform: uppercase
+        font-size: 2rem
+        letter-spacing: 2px
+        color: #1A000C
+    .new-container
+        display: flex
+        .new-left
+            width: 25%
+            .new-box
+                @include NewsBox
+                a:hover
+                    img
+                        opacity: 0.7
+                h5
+                    @include NewsText
+                    border-bottom: 1px solid #1A000C
+                    cursor: pointer
+                p
+                    @include NewsText
+        .new-mid
+            width: 50%
+            margin: 5% 2% 0 2%
+            .new-box
+                @include NewsBox
+                a:hover
+                    img
+                        opacity: 0.7
+                h5
+                    @include NewsText
+                    border-bottom: 1px solid #1A000C
+                    cursor: pointer
+                p.price
+                    @include NewsText
+                p.lastprice
+                    @include NewsText
+                    text-decoration: line-through
+        .new-right
+            width: 25%
+            .new-box
+                @include NewsBox
+                h5
+                    @include NewsText
+                    border-bottom: 1px solid #1A000C
+                    cursor: pointer
+                a:hover
+                    img
+                        opacity: 0.7
+                p
+                    @include NewsText
+
+
+
+
+
+
+
+
+.furnitures
+    margin-top: 3px
+    display: flex
+    justify-content: center
+    .livingroom
+        padding: 5px
+        position: relative
+        .bench, .sofa, .lamp, .curtain, .armchair, .image
+            @include Button
+        .bench:hover, .sofa:hover, .lamp:hover, .curtain:hover, .armchair:hover, .image:hover
+            @include ButtonHover
+        .bench
+            left: 50%
+            top: 62%
+        .sofa
+            left: 55%
+            top: 55%
+        .lamp
+            left: 82.5%
+            top: 38%
+        .curtain
+            left: 25%
+            top: 38%
+        .armchair
+            left: 15%
+            top: 50%
+        .image
+            left: 65%
+            top: 30%
+    .bedroom
+        padding: 5px
+        position: relative
+        .bed, .rack, .clock, .mirror, .bedside-cabinet, .pouffe, .table
+            @include Button
+        .bed:hover, .rack:hover, .clock:hover, .mirror:hover, .bedside-cabinet:hover, .pouffe:hover, .table:hover
+            @include ButtonHover
+        .bed
+            top: 50%
+            left: 50%
+        .rack
+            top: 18%
+            left: 25%
+        .clock
+            top: 30%
+            left: 5%
+        .mirror
+            top: 33%
+            left: 35%
+        .bedside-cabinet
+            top: 70%
+            left: 80%
+        .pouffe
+            top: 75%
+            left: 35%
+        .table
+            top: 80%
+            left: 10%
+
+.recommended
+    width: 85%
+    margin-right: auto
+    margin-left: auto
+    .rec-boxes
+        display: flex
+        gap: 1.5rem
+        .rec-box
+            @include NewsBox
+            h5
+                @include NewsText
+                border-bottom: 1px solid #1A000C
+            p
+                @include NewsText
+            a:hover
+                img
+                    opacity: .7
+    h5.rec-nav
+        text-align: center
+        text-transform: uppercase
+        font-size: 2rem
+        letter-spacing: 2px
+        color: #1A000C
+
+
+
+
+.comments
+    width: 90vw
+    margin: 0 auto
+    h3
+        text-align: center
+        font-size: 2rem
+        text-transform: uppercase
+    .all-comment-boxes
+        display: grid
+        gap: 1.5rem
+        grid-template-columns: repeat(4, 1fr)
+        .commentery-box
+            width: 100%
+            border-radius: 25px
+            position: relative
+            .person
+                padding: 20px
+                display: flex
+                .photo
+                    border: 1px solid #1A000C
+                    width: 45px
+                    height: 45px
+                    border-radius: 25px
+                    overflow: hidden
+                    background-color: #fff
+                    img
+                        width: 45px
+                        height: 45px
+                .person-info
+                    .name
+                        margin-left: 10px
+                        font-weight: 600
+                    .verified
+                        margin-left: 10px
+            .stars
+                text-align: center
+                padding: 20px
+                font-size: 1.3rem
+            .opinion
+                padding: 20px
+        .commentery-box:first-child
+            background-color:#b08f59
+        .commentery-box:nth-child(2)
+            background-color:#9B8755
+        .commentery-box:nth-child(3)
+            background-color:#c3b9a0
+        .commentery-box:nth-child(4)
+            background-color:#70623E
+        .commentery-box:last-child
+            grid-column-start: 4
+            grid-row-start: 1
+            grid-row-end: span 2
+            background: #c3b9a0
+.grid-col-2
+    grid-column: span 2
+
+
+
+
+footer
+    min-height: 80vh
+    width: 90vw
+    margin: 0 auto
+    .top-footer
+        display: flex
+        .footer-left-side
+            width: 30vw
+            h6
+                font-size: 1.2rem
+                text-transform: uppercase
+            p
+                font-size: 1rem
+            button
+                padding: 10px 10px
+                border-radius: 20px
+                border: 2px solid #1A000C
+                background-color: #d4cab1
+                color: #1A000C
+                font-weight: 600
+                cursor: pointer
+            button:hover
+                background-color: #1A000C
+                color: #d4cab1
+        .footer-right-side
+            width: 65vw
+            margin-left: 5vw
+            .cards-container
+                display: flex
+                .card
+                    width: calc(75vw/4)
+                    text-align: left
+                    h6
+                        font-size: 1.2rem
+                        text-transform: uppercase
+                    a
+                        text-decoration: none
+                        color: #000
+                        text-align: left
+                        p:hover
+                            font-weight: 600
+                    p
+                        i
+                            font-size: 1.2rem
+                            margin-right: 40px
+                    .newsletter
+                        margin-top: 100px
+                        h6
+                            text-align: center
+                            font-size: 1.2rem
+                            margin-bottom: 0
+                        p
+                            text-align: center
+                        form
+                            display: flex
+                            #email-newsletter
+                                margin-right: 0
+                                padding: 10px 10px
+                                border-top-left-radius: 20px
+                                border-bottom-left-radius: 20px
+                                border: 2px solid #1A000C
+                                background-color: #d4cab1
+                                color: #1A000C
+                                font-weight: 600
+                            #submit-newsletter
+                                margin-left: 0
+                                padding: 10px 10px
+                                border-top-right-radius: 20px
+                                border-bottom-right-radius: 20px
+                                border: 2px solid #030303
+                                background-color: #d4cab1
+                                color: #1A000C
+                                font-weight: 600
+                                cursor: pointer
+                            #submit-newsletter:hover
+                                background-color: #1A000C
+                                color: #d4cab1
+
+    .footer-bottom
+        width: 100%
+        .socials
+            justify-content: center
+            display: flex
+            a
+                i
+                    font-size: 2.5rem
+                    color: #1A000C
+                    margin-top: 2vw
+                    margin-right: 2vw
+                i:hover
+                    transform: translateY(-6px) scale(1.1)
+        hr
+            margin-top: 1%
+            width: 80vw
+            border-color: #c3b9a0
+        .copyright
+            display: flex
+            justify-content: space-between
+            width: 100%
+            .copy-left
+                width: 50%
+            .copy-right
+                width: 50%
+                display: flex
+                justify-content: right
+                a
+                    text-decoration: none
+                    color: #000
+                    p
+                        margin-left: 30px
+                    p:hover
+                        font-weight: 600
+
+
+            
+
+@keyframes spin
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(360deg)
+
+
+@media (max-width: 1100px)
+    header
+        nav
+            .bottom-nav 
+                display: none
+
+@media (max-width: 1100px)
+    header
+        nav
+            .bottom-nav 
+                display: none
+
+@media (max-width: 1000px)
+    footer
+        .top-footer
+            display: block
+            margin: 0 auto
+            text-align: center
+            .footer-left-side
+                width: 90vw
+            .footer-right-side
+                width: 90vw
+                margin-left: 0vw
+                .cards-container
+                    display: block
